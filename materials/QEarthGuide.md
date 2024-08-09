@@ -17,50 +17,64 @@
 10. [Installation](#installation)
 11. [Usage](#usage)
 
-
 ## **Introduction**
 
-The QEarth project aims to advance climate forecasting by integrating quantum computing and AI techniques. We utilized various models to predict daily temperatures and explored quantum-enhanced methods to improve accuracy. This README provides a detailed overview of the project's steps, methodologies, and results.
+The QEarth project aims to advance climate forecasting by integrating quantum computing and AI techniques. We utilized
+various models to predict daily temperatures and explored quantum-enhanced methods to improve accuracy. This README
+provides a detailed overview of the project's steps, methodologies, and results.
 
 ## **Why Predict Climate Temperature?**
 
 Accurate climate temperature predictions are crucial for several reasons:
 
 1. **Impact on Human Health and Safety:**
-    - Extreme temperatures can lead to health issues such as heat strokes or hypothermia. Accurate predictions help in preparing for and mitigating these risks, ensuring public safety.
+    - Extreme temperatures can lead to health issues such as heat strokes or hypothermia. Accurate predictions help in
+      preparing for and mitigating these risks, ensuring public safety.
 
 2. **Agricultural Planning:**
-    - Farmers rely on weather forecasts to make informed decisions about planting and harvesting. Reliable temperature predictions can enhance agricultural productivity and food security.
+    - Farmers rely on weather forecasts to make informed decisions about planting and harvesting. Reliable temperature
+      predictions can enhance agricultural productivity and food security.
 
 3. **Disaster Preparedness:**
-    - Understanding temperature trends can help in predicting and preparing for natural disasters such as heatwaves and cold spells, reducing their impact on communities.
+    - Understanding temperature trends can help in predicting and preparing for natural disasters such as heatwaves and
+      cold spells, reducing their impact on communities.
 
 4. **Economic Implications:**
-    - Temperature anomalies can affect energy demand, transportation, and other economic activities. Precise predictions can lead to more efficient resource management and cost savings.
+    - Temperature anomalies can affect energy demand, transportation, and other economic activities. Precise predictions
+      can lead to more efficient resource management and cost savings.
 
 5. **Environmental Monitoring:**
-    - Monitoring temperature changes over time is crucial for studying climate change and its impact on ecosystems. Early detection of trends helps in addressing environmental challenges.
+    - Monitoring temperature changes over time is crucial for studying climate change and its impact on ecosystems.
+      Early detection of trends helps in addressing environmental challenges.
 
 ## **Role of AI in Climate Prediction**
 
 Artificial Intelligence (AI) plays a transformative role in climate prediction:
 
-- **Data Handling:** AI algorithms can process vast amounts of climate data efficiently, identifying patterns and trends that are not easily visible through traditional methods.
-- **Model Accuracy:** Machine learning models, such as LSTM and SVM, can capture complex relationships in climate data, leading to more accurate forecasts.
-- **Real-Time Analysis:** AI can provide real-time temperature predictions, allowing for timely responses to weather-related events.
+- **Data Handling:** AI algorithms can process vast amounts of climate data efficiently, identifying patterns and trends
+  that are not easily visible through traditional methods.
+- **Model Accuracy:** Machine learning models, such as LSTM and SVM, can capture complex relationships in climate data,
+  leading to more accurate forecasts.
+- **Real-Time Analysis:** AI can provide real-time temperature predictions, allowing for timely responses to
+  weather-related events.
 
 ## **Quantum Computing for Enhanced Predictions**
 
 Quantum Computing (QC) offers potential advantages for climate modeling:
 
-- **Increased Computational Power:** QC can handle complex simulations and optimizations that are challenging for classical computers, potentially leading to more accurate and detailed climate models.
-- **Advanced Algorithms:** Quantum algorithms may offer improvements over classical algorithms in solving optimization problems, which can enhance forecasting accuracy.
-- **Efficient Data Processing:** QC could process large datasets more efficiently, leading to faster and more accurate predictions.
+- **Increased Computational Power:** QC can handle complex simulations and optimizations that are challenging for
+  classical computers, potentially leading to more accurate and detailed climate models.
+- **Advanced Algorithms:** Quantum algorithms may offer improvements over classical algorithms in solving optimization
+  problems, which can enhance forecasting accuracy.
+- **Efficient Data Processing:** QC could process large datasets more efficiently, leading to faster and more accurate
+  predictions.
 
 ## **Data**
 
-- **Dataset:** [Daily Temperature of Major Cities](https://www.kaggle.com/datasets/sudalairajkumar/daily-temperature-of-major-cities)
-- **Description:** The dataset includes daily temperature records for major cities worldwide, featuring columns such as date, city, country, and temperature.
+- **Dataset:
+  ** [Daily Temperature of Major Cities](https://www.kaggle.com/datasets/sudalairajkumar/daily-temperature-of-major-cities)
+- **Description:** The dataset includes daily temperature records for major cities worldwide, featuring columns such as
+  date, city, country, and temperature.
 - **Features:**
     - Date (year, month, day)
     - Region
@@ -79,7 +93,8 @@ Quantum Computing (QC) offers potential advantages for climate modeling:
 
 2. **Feature Engineering:**
     - **Date Features:** Extracted year, month, and day from the date column.
-    - **One-Hot Encoding:** Applied one-hot encoding to categorical columns (city, country, month, day, year) to convert them into numerical features.
+    - **One-Hot Encoding:** Applied one-hot encoding to categorical columns (city, country, month, day, year) to convert
+      them into numerical features.
     - **Normalization:** Scaled temperature values for better model performance.
     - **Linear Regression Representation:**
         - Analyzed trends using linear regression graphs.
@@ -90,6 +105,7 @@ Quantum Computing (QC) offers potential advantages for climate modeling:
    ![Distribution of Data Entries](charts/img.png)
 
 2. **Distribution of Data Entries Count per Regions**
+
    ![Data Entries by Region](charts/Distribution%20of%20Data%20entries%20count%20per%20regions%20table.png)
 
 3. **Average Temperature per Year**
@@ -110,12 +126,16 @@ Quantum Computing (QC) offers potential advantages for climate modeling:
     - Train: 8,812
     - Validation: 2,954
     - Test: 3,692
-![img.png](charts/data_split.png)
-  
+      ![img.png](charts/data_split.png)
+
 ## **Models**
 
 ### **Baseline Model: LSTM**
-- **Model Description:** Long Short-Term Memory (LSTM) network designed to capture temporal dependencies in temperature data.
+
+[LSTM SOURCE CODE](./../models/womanium-climate-ai-LSTM.ipynb)
+
+- **Model Description:** Long Short-Term Memory (LSTM) network designed to capture temporal dependencies in temperature
+  data.
 - **Implementation:** Built and trained using historical temperature data.
 - **Results:**
     - R²: 0.871
@@ -124,11 +144,16 @@ Quantum Computing (QC) offers potential advantages for climate modeling:
     - RMSE: 2.276
 
 ### **Support Vector Machines (SVM)**
+
+[SVM SOURCE CODE](./../models/womanium-climate-ai-SVM.ipynb)
+
 - **Model Description:** Support Vector Regression (SVR) to predict temperature values.
 - **Implementation:** Applied SVR to the preprocessed data.
 - **Results:** Achieved slightly higher accuracy compared to LSTM.
 
 ### **Quantum Support Vector Machines (QSVM)**
+
+[QSVM SOURCE CODE](./../models/womanium-climate-ai-QSVM.ipynb)
 
 - **Model Description:** Quantum Support Vector Regression (QSVR) applied using quantum simulators.
 - **Results:**
@@ -139,7 +164,8 @@ Quantum Computing (QC) offers potential advantages for climate modeling:
 
 ### **Dimensionality Reduction**
 
-To facilitate running QSVR, Principal Component Analysis (PCA) was performed to reduce the dimensions of features to 10. This reduction helped in managing computational complexity and optimizing model performance.
+To facilitate running QSVR, Principal Component Analysis (PCA) was performed to reduce the dimensions of features to 10.
+This reduction helped in managing computational complexity and optimizing model performance.
 
 ## **Results**
 
@@ -156,21 +182,39 @@ To facilitate running QSVR, Principal Component Analysis (PCA) was performed to 
 ## **Installation**
 
 Clone Repository:
+
 ```bash
 git clone https://github.com/your-repo/QEarth.git
 ```
 
 ## **Usage**
+
 ### Train Models:
+
 **LSTM**
+
 ```bash
 python models/womanium-climate-ai-LSTM.ipynb
 ```
+
 **SVR**
+
 ```bash
 python models/womanium-climate-ai-SVM.ipynb
 ```
+
 **QSVR**
+
 ```bash
 python models/womanium-climate-ai-QSVM.ipynb
 ```
+
+---
+
+## **Acknowledgments**
+
+We would like to extend our sincere thanks to the Womanium Quantum+AI program for their support and funding. Their
+resources and guidance have been invaluable in advancing our project and exploring the potential of quantum computing
+and AI in climate forecasting.
+
+---
