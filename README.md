@@ -43,7 +43,7 @@ Please read the [QEarthGuide](./materials/QEarthGuide.md) for detailed informati
 
 ### Project Presentation Deck:
 - You can find the presentation deck [here](./materials/QEarth.pdf).
-- You can find a 3-minute video presentation [here](./materials/presentation_video.mp4).
+- You can find a 3-minute video presentation [here](./materials/Presentation_video.mp4).
 
 See project presentation guidelines [here](https://docs.google.com/document/d/13nWF8AxFAfFYTWEYPT3BpPdYkqtxxSAjmuXj_zcMh-E/edit?usp=sharing)
 ---
