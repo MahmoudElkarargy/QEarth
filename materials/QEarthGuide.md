@@ -13,9 +13,10 @@
     - [Support Vector Machines (SVM)](#support-vector-machines-svm)
     - [Quantum Support Vector Machines (QSVM)](#quantum-support-vector-machines-qsvm)
 8. [Results](#results)
-9. [Future Work](#future-work)
-10. [Installation](#installation)
-11. [Usage](#usage)
+9. [Mobile Application](#mobile-applicatation)
+10. [Future Work](#future-work)
+11. [Installation](#installation)
+12. [Usage](#usage)
 
 ## **Introduction**
 
@@ -172,6 +173,20 @@ This reduction helped in managing computational complexity and optimizing model 
 - **LSTM:** Matched previous studies with robust temperature predictions.
 - **SVM:** Slight improvements over LSTM, highlighting its efficacy.
 - **QSVM:** Demonstrated potential but limited by simulation and hardware constraints.
+
+## **Mobile Application**
+- Our model will be offered as an API that will provide long-term, real-time, location-specific weather predictions, enabling integration with websites and mobile devices.
+- We developed the frontend using **Flutter**
+
+- **Starting window**
+![get_started.png](imgs%2Fget_started.png)
+
+- **Main Page**
+![main_page.png](imgs%2Fmain_page.png)
+
+- **Information page**
+![info.png](imgs%2Finfo.png)
+
 
 ## **Future Work**
 
